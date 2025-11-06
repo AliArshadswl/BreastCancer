@@ -39,9 +39,3 @@ Below is a simplified view of the metadata entries for **phantom A2F1**:
 - **Tumor in Fibrous (tum_in_fib)** indicates if the tumor is inside the fibrous region (0 = No).
 """
 
-# Save to a Markdown file
-file_path = "phantom_metadata.md"
-with open(file_path, "w") as f:
-    f.write(markdown_content)
-
-print(f"Markdown file saved as: {file_path}")
