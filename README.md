@@ -1,8 +1,47 @@
-A2F1, A2F11, A2F12, A2F2, A2F3 (5 phantoms with A2 adipose shell)
-A3F1, A3F3, A3F2, A3F11, A3F12 (5 phantoms with A3 adipose shell)
-A14F1, A14F12, A14F11, A14F3, A14F2 (5 phantoms with A14 adipose shell)
-A16F1, A16F11, A16F14, A16F2, A16F3 (5 phantoms with A16 adipose shell)
+# Create a Markdown file summarizing phantom groups and metadata
 
+markdown_content = """# Phantom Groups and Metadata
 
-Metadata:
-[{np.str_('n_expt'): 1, np.str_('id'): 1, np.str_('phant_id'): 'A2F1', np.str_('tum_diam'): 3.0, np.str_('tum_shape'): 'sphere', np.str_('tum_x'): 2.25, np.str_('tum_y'): 2.25, np.str_('tum_z'): -6.5, np.str_('birads'): 1, np.str_('adi_ref_id'): 3, np.str_('emp_ref_id'): 16, np.str_('date'): '20210730', np.str_('n_session'): 1, np.str_('ant_rad'): 18.0, np.str_('ant_z'): -6.5, np.str_('fib_ang'): 0.0, np.str_('adi_x'): 0.0, np.str_('adi_y'): 0.0, np.str_('fib_ref_id'): 2, np.str_('fib_x'): 0.0, np.str_('fib_y'): 0.0, np.str_('tum_in_fib'): 0}, {np.str_('n_expt'): 2, np.str_('id'): 2, np.str_('phant_id'): 'A2F1', np.str_('tum_diam'): nan, np.str_('tum_shape'): '', np.str_('tum_x'): nan, np.str_('tum_y'): nan, np.str_('tum_z'): nan, np.str_('birads'): 1, np.str_('adi_ref_id'): 3, np.str_('emp_ref_id'): 16, np.str_('date'): '20210730', np.str_('n_session'): 1, np.str_('ant_rad'): 18.0, np.str_('ant_z'): -6.5, np.str_('fib_ang'): 0.0, np.str_('adi_x'): 0.0, np.str_('adi_y'): 0.0, np.str_('fib_ref_id'): nan, np.str_('fib_x'): 0.0, np.str_('fib_y'): 0.0, np.str_('tum_in_fib'): nan}, {np.str_('n_expt'): 4, np.str_('id'): 4, np.str_('phant_id'): 'A2F1', np.str_('tum_diam'): 2.5, np.str_('tum_shape'): 'sphere', np.str_('tum_x'): 2.25, np.str_('tum_y'): 2.25, np.str_('tum_z'): -6.5, np.str_('birads'): 1, np.str_('adi_ref_id'): 6, np.str_('emp_ref_id'): 16, np.str_('date'): '20210730', np.str_('n_session'): 1, np.str_('ant_rad'): 18.0, np.str_('ant_z'): -6.5, np.str_('fib_ang'): 0.0, np.str_('adi_x'): 0.0, np.str_('adi_y'): 0.0, np.str_('fib_ref_id'): 5, np.str_('fib_x'): 0.0, np.str_('fib_y'): 0.0, np.str_('tum_in_fib'): 0}, {np.str_('n_expt'): 5, np.str_('id'): 5, np.str_('phant_id'): 'A2F1', np.str_('tum_diam'): nan, np.str_('tum_shape'): '', np.str_('tum_x'): nan, np.str_('tum_y'): nan, np.str_('tum_z'): nan, np.str_('birads'): 1, np.str_('adi_ref_id'): 6, np.str_('emp_ref_id'): 16, np.str_('date'): '20210730', np.str_('n_session'): 1, np.str_('ant_rad'): 18.0, np.str_('ant_z'): -6.5, np.str_('fib_ang'): 0.0, np.str_('adi_x'): 0.0, np.str_('adi_y'): 0.0, np.str_('fib_ref_id'): nan, np.str_('fib_x'): 0.0, np.str_('fib_y'): 0.0, np.str_('tum_in_fib'): nan}, {np.str_('n_expt'): 7, np.str_('id'): 7, np.str_('phant_id'): 'A2F1', np.str_('tum_diam'): 2.0, np.str_('tum_shape'): 'sphere', np.str_('tum_x'): 2.25, np.str_('tum_y'): 2.25, np.str_('tum_z'): -6.5, np.str_('birads'): 1, np.str_('adi_ref_id'): 9, np.str_('emp_ref_id'): 16, np.str_('date'): '20210730', np.str_('n_session'): 1, np.str_('ant_rad'): 18.0, np.str_('ant_z'): -6.5, np.str_('fib_ang'): 0.0, np.str_('adi_x'): 0.0, np.str_('adi_y'): 0.0, np.str_('fib_ref_id'): 8, np.str_('fib_x'): 0.0, np.str_('fib_y'): 0.0, np.str_('tum_in_fib'): 0}]
+## Phantom Groups
+
+There are **20 phantoms** organized by their **adipose shell type**:
+
+- **A2 Adipose Shell:**  
+  `A2F1`, `A2F11`, `A2F12`, `A2F2`, `A2F3`
+
+- **A3 Adipose Shell:**  
+  `A3F1`, `A3F2`, `A3F3`, `A3F11`, `A3F12`
+
+- **A14 Adipose Shell:**  
+  `A14F1`, `A14F2`, `A14F3`, `A14F11`, `A14F12`
+
+- **A16 Adipose Shell:**  
+  `A16F1`, `A16F2`, `A16F3`, `A16F11`, `A16F14`
+
+---
+
+## Example Metadata (for Phantom `A2F1`)
+
+Below is a simplified view of the metadata entries for **phantom A2F1**:
+
+| Experiment | ID | Tumor Diameter (mm) | Tumor Shape | Tumor Position (x, y, z) | BI-RADS | Adipose Ref | Fibrous Ref | Empirical Ref | Date | Tumor in Fibrous | Notes |
+|-------------|----|---------------------|--------------|---------------------------|----------|--------------|--------------|----------------|------|------------------|-------|
+| 1 | 1 | 3.0 | sphere | (2.25, 2.25, -6.5) | 1 | 3 | 2 | 16 | 2021-07-30 | 0 | Standard sample |
+| 2 | 2 | — | — | — | 1 | 3 | — | 16 | 2021-07-30 | — | Missing tumor data |
+| 4 | 4 | 2.5 | sphere | (2.25, 2.25, -6.5) | 1 | 6 | 5 | 16 | 2021-07-30 | 0 | Updated adipose/fibrous refs |
+| 5 | 5 | — | — | — | 1 | 6 | — | 16 | 2021-07-30 | — | Missing tumor data |
+| 7 | 7 | 2.0 | sphere | (2.25, 2.25, -6.5) | 1 | 9 | 8 | 16 | 2021-07-30 | 0 | Final reference update |
+
+**Key:**  
+- `—` = data not available (NaN)  
+- **Adipose/Fibrous/Empirical Ref IDs** correspond to material references used in experiments.  
+- **BI-RADS** = Breast Imaging Reporting and Data System score.  
+- **Tumor in Fibrous (tum_in_fib)** indicates if the tumor is inside the fibrous region (0 = No).
+"""
+
+# Save to a Markdown file
+file_path = "phantom_metadata.md"
+with open(file_path, "w") as f:
+    f.write(markdown_content)
+
+print(f"Markdown file saved as: {file_path}")
