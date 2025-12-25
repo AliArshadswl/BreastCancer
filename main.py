@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Adipose-LOGO RoPE Transformer (with optimal window search + ROC + RoPE ablation + timing)
+Adipose-LOASO RoPE Transformer (with optimal window search + ROC + RoPE ablation + timing)
 
 Additions over your previous version:
 - RoPE can be toggled on/off via cfg.USE_ROPE or CLI flag --no_rope (ablation).
@@ -16,7 +16,7 @@ Additions over your previous version:
       approximate frequency in Hz for the peak attention bin.
 
 Outputs:
-- analysis/logo_runs_metrics.csv
+- analysis/loaso_runs_metrics.csv
 - analysis/freq/*            (frequency window visualization)
 - analysis/heatmaps/*        (|Z| heatmaps)
 - analysis/features/*        (feature stats / PCA / profiles)
@@ -104,7 +104,7 @@ class CONFIG:
 
     # Output metrics CSV (now inside analysis/)
     OUT_DIR: str = "analysis"
-    RESULTS_CSV: str = os.path.join("analysis", "logo_runs_metrics.csv")
+    RESULTS_CSV: str = os.path.join("analysis", "loaso_runs_metrics.csv")
 
     # Analysis outputs
     N_HEATMAP_SAMPLES_PER_SHELL: int = 3
@@ -705,7 +705,7 @@ class SeqClassifierRoPE(nn.Module):
 
 def train_one_fold(tr_loader, va_loader, model, device, max_epochs, patience, lr, wd):
     """
-    Train one LOGO fold.
+    Train one loaso fold.
     Returns:
     - best model (by val loss)
     - total training time in seconds
@@ -1269,7 +1269,7 @@ def run_one_shell_fold(shell: str,
                        seed: int,
                        save_rollout_prefix: str | None = None) -> Tuple[dict, np.ndarray, np.ndarray]:
     """
-    Full LOGO pipeline for one hold-out shell:
+    Full loaso pipeline for one hold-out shell:
     - Train on shells != shell, early stop by val loss.
     - Evaluate on held-out shell.
     - Returns:
