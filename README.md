@@ -309,17 +309,7 @@ The output CSV maps peak attention to:
 
 ## Citation
 
-If you use this code in your research, please cite:
-
-```bibtex
-@article{yourname2024adipose,
-  title={Adipose-LOASO RoPE Transformer for Breast Microwave Imaging Tumor Detection},
-  author={Your Name and Collaborators},
-  journal={Journal Name},
-  year={2024},
-  doi={10.xxxx/xxxxx}
-}
-```
+Paper is submitted to TMI. We'll provide citations as soon as we get it. Thanks
 
 ## License
 
@@ -328,9 +318,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgments
 
 - University of Manitoba Breast Imaging Dataset (UM-BMID)
-- PyTorch team for the deep learning framework
-- scikit-learn for preprocessing and evaluation utilities
 
 ## Contact
 
-For questions or issues, please open a GitHub issue or contact [your.email@domain.com](mailto:your.email@domain.com).
+For questions or issues, please open a GitHub issue or contact [arshad@siat.ac.cn](mailto:arshad@siat.ac.cn).
