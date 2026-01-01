@@ -60,7 +60,7 @@ pip install numpy torch scikit-learn scipy matplotlib
 ### Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/adipose-loaso-transformer.git
+gh repo clone AliArshadswl/BreastCancer
 cd adipose-loaso-transformer
 ```
 
