@@ -1,0 +1,249 @@
+PS E:\test> & C:\Users\HONOR\AppData\Local\Programs\Python\Python311\python.exe e:/test/metadata_exploration.py
+============================================================
+Loading metadata...
+============================================================
+Metadata loaded successfully.
+
+============================================================
+BASIC STRUCTURE
+============================================================
+Type of metadata object: <class 'list'>
+Number of entries: 1008
+Type of first entry: <class 'dict'>
+
+============================================================
+EXAMPLE METADATA ENTRY (index 0)
+============================================================
+{np.str_('adi_ref_id'): nan,
+ np.str_('adi_x'): 0.0,
+ np.str_('adi_y'): 0.0,
+ np.str_('ant_rad'): 21.0,
+ np.str_('ant_z'): -6.51,
+ np.str_('birads'): 4,
+ np.str_('date'): '2019-09-07',
+ np.str_('emp_ref_id'): 6,
+ np.str_('fib_ang'): 0.0,
+ np.str_('fib_ref_id'): nan,
+ np.str_('fib_x'): 0.0,
+ np.str_('fib_y'): 0.0,
+ np.str_('id'): 1,
+ np.str_('n_expt'): 1,
+ np.str_('n_session'): 1,
+ np.str_('phant_id'): 'A11F14',
+ np.str_('tum_in_fib'): nan,
+ np.str_('tum_rad'): nan,
+ np.str_('tum_shape'): '',
+ np.str_('tum_x'): nan,
+ np.str_('tum_y'): nan,
+ np.str_('tum_z'): nan}
+
+============================================================
+METADATA FIELDS & FREQUENCY
+============================================================
+n_expt                    : 1008
+id                        : 1008
+phant_id                  : 1008
+tum_rad                   : 1008
+tum_shape                 : 1008
+tum_x                     : 1008
+tum_y                     : 1008
+tum_z                     : 1008
+birads                    : 1008
+adi_ref_id                : 1008
+emp_ref_id                : 1008
+date                      : 1008
+n_session                 : 1008
+ant_rad                   : 1008
+ant_z                     : 1008
+fib_ang                   : 1008
+adi_x                     : 1008
+adi_y                     : 1008
+fib_ref_id                : 1008
+fib_x                     : 1008
+fib_y                     : 1008
+tum_in_fib                : 1008
+
+============================================================
+CONVERTING TO PANDAS DATAFRAME
+============================================================
+DataFrame shape: (1008, 22)
+
+DataFrame columns:
+[np.str_('n_expt'), np.str_('id'), np.str_('phant_id'), np.str_('tum_rad'), np.str_('tum_shape'), np.str_('tum_x'), np.str_('tum_y'), np.str_('tum_z'), np.str_('birads'), np.str_('adi_ref_id'), np.str_('emp_ref_id'), np.str_('date'), np.str_('n_session'), np.str_('ant_rad'), np.str_('ant_z'), np.str_('fib_ang'), np.str_('adi_x'), np.str_('adi_y'), np.str_('fib_ref_id'), np.str_('fib_x'), np.str_('fib_y'), np.str_('tum_in_fib')]
+
+First 5 rows:
+   n_expt  id phant_id  tum_rad tum_shape  tum_x  tum_y  tum_z  birads  adi_ref_id  ...  n_session ant_rad  ant_z  fib_ang  adi_x  adi_y  fib_ref_id  fib_x  fib_y  tum_in_fib
+0       1   1   A11F14      NaN              NaN    NaN    NaN       4         NaN  ...          1    21.0  -6.51      0.0    0.0    0.0         NaN    0.0    0.0         NaN
+1       2   2   A11F14      NaN              NaN    NaN    NaN       4         NaN  ...          1    21.0  -6.51     15.0    0.0    1.0         NaN    0.0    0.0         NaN
+2       3   3   A11F14      NaN              NaN    NaN    NaN       4         NaN  ...          1    21.0  -6.51    -15.0    0.0   -1.0         NaN    0.0    0.0         NaN
+3       4   4   A11F14      NaN              NaN    NaN    NaN       4         NaN  ...          1    21.0  -6.51      0.0    0.0    0.0         NaN    0.0   -1.0         NaN
+4       5   5   A11F14      NaN              NaN    NaN    NaN       4         NaN  ...          1    21.0  -6.51      0.0    0.5    1.0         NaN    0.0    1.0         NaN
+
+[5 rows x 22 columns]
+
+============================================================
+MISSING VALUE ANALYSIS
+============================================================
+fib_ref_id    1007
+tum_in_fib     518
+tum_z          504
+tum_y          504
+tum_x          504
+tum_rad        504
+adi_ref_id     503
+fib_ang          2
+fib_y            1
+id               0
+tum_shape        0
+phant_id         0
+n_expt           0
+birads           0
+ant_rad          0
+n_session        0
+date             0
+emp_ref_id       0
+adi_y            0
+adi_x            0
+ant_z            0
+fib_x            0
+dtype: int64
+
+Missing value percentage:
+fib_ref_id    99.90
+tum_in_fib    51.39
+tum_z         50.00
+tum_y         50.00
+tum_x         50.00
+tum_rad       50.00
+adi_ref_id    49.90
+fib_ang        0.20
+fib_y          0.10
+id             0.00
+tum_shape      0.00
+phant_id       0.00
+n_expt         0.00
+birads         0.00
+ant_rad        0.00
+n_session      0.00
+date           0.00
+emp_ref_id     0.00
+adi_y          0.00
+adi_x          0.00
+ant_z          0.00
+fib_x          0.00
+dtype: float64
+
+============================================================
+LABEL FIELD ANALYSIS: tum_rad
+============================================================
+tum_rad summary statistics:
+count    504.000000
+mean       0.986111
+std        0.388459
+min        0.500000
+25%        0.500000
+50%        1.000000
+75%        1.500000
+max        1.500000
+Name: tum_rad, dtype: float64
+
+Non-null tum_rad count: 504
+Null tum_rad count: 504
+
+Binary label distribution (0 = no tumor, 1 = tumor):
+tum_rad
+0    504
+1    504
+Name: count, dtype: int64
+
+============================================================
+NUMERIC FEATURE ANALYSIS
+============================================================
+Numeric columns:
+[np.str_('n_expt'), np.str_('id'), np.str_('tum_rad'), np.str_('tum_x'), np.str_('tum_y'), np.str_('tum_z'), np.str_('birads'), np.str_('adi_ref_id'), np.str_('emp_ref_id'), np.str_('n_session'), np.str_('ant_rad'), np.str_('ant_z'), np.str_('fib_ang'), np.str_('adi_x'), np.str_('adi_y'), np.str_('fib_ref_id'), np.str_('fib_x'), np.str_('fib_y'), np.str_('tum_in_fib')]   
+
+Summary statistics for numeric columns:
+             count        mean           std     min     25%     50%        75%      max
+n_expt      1008.0    4.874008  3.044685e+00    1.00    2.00    4.00     8.0000    13.00
+id          1008.0  620.815476  3.738195e+02    1.00  302.75  590.50   941.2500  1301.00
+tum_rad      504.0    0.986111  3.884587e-01    0.50    0.50    1.00     1.5000     1.50
+tum_x        504.0    0.116171  1.866041e+00   -3.75   -1.25    0.50     1.7500     3.75
+tum_y        504.0   -0.789087  2.541737e+00   -5.25   -2.50   -0.75     1.3125     5.25
+tum_z        504.0   -6.309524  7.007867e-01   -6.70   -6.70   -6.70    -6.5000    -3.00
+birads      1008.0    2.515873  1.132593e+00    1.00    2.00    2.00     4.0000     4.00
+adi_ref_id   505.0  896.067327  2.873894e+02  109.00  755.00  932.00  1111.0000  1292.00
+emp_ref_id  1008.0  621.452381  3.739650e+02    6.00  298.00  592.00   944.0000  1298.00
+n_session   1008.0   76.904762  4.375985e+01    1.00   39.00   76.00   115.0000   152.00
+ant_rad     1008.0   21.871032  4.812617e-01   21.00   22.00   22.00    22.0000    23.00
+ant_z       1008.0   -6.510000  1.777239e-15   -6.51   -6.51   -6.51    -6.5100    -6.51
+fib_ang     1006.0   68.454274  9.127876e+01 -120.00    0.00   45.00   180.0000   240.00
+adi_x       1008.0    0.026290  3.283272e-01   -1.00    0.00    0.00     0.0000     1.00
+adi_y       1008.0   -0.000496  2.987474e-01   -1.00    0.00    0.00     0.0000     1.00
+fib_ref_id     1.0  289.000000           NaN  289.00  289.00  289.00   289.0000   289.00
+fib_x       1008.0   -0.008185  3.190337e-01   -2.00    0.00    0.00     0.0000     2.00
+fib_y       1007.0    0.048411  6.295431e-01   -2.00    0.00    0.00     0.0000     2.00
+tum_in_fib   490.0    0.183673  3.876134e-01    0.00    0.00    0.00     0.0000     1.00
+
+============================================================
+CATEGORICAL FEATURE ANALYSIS
+============================================================
+Categorical columns:
+[np.str_('phant_id'), np.str_('tum_shape'), np.str_('date')]
+
+Value counts for 'phant_id':
+phant_id
+A1F1      38
+A1F3      38
+A12F1     38
+A3F5      38
+A12F13    36
+A16F14    28
+A16F5     28
+A13F1     28
+A13F14    28
+A14F14    28
+Name: count, dtype: int64
+
+Value counts for 'tum_shape':
+tum_shape
+          504
+sphere    504
+Name: count, dtype: int64
+
+Value counts for 'date':
+date
+2019-10-26    76
+2019-12-13    59
+2019-10-24    58
+2019-12-11    54
+2019-12-06    51
+2019-10-28    50
+2019-10-25    45
+2019-09-07    45
+2019-12-03    44
+2019-12-12    44
+Name: count, dtype: int64
+
+============================================================
+CONSTANT / LOW-VARIANCE COLUMNS
+============================================================
+ant_z                     -> CONSTANT (unique values = 1)
+
+============================================================
+EXPORTING METADATA TO CSV
+============================================================
+Metadata exported to:
+F:\umbmid\g2\g2_metadata_explored.csv
+
+============================================================
+EXPLORATION COMPLETE
+============================================================
+
+Next recommended steps:
+1) Open the CSV in Excel / LibreOffice.
+2) Identify additional useful metadata fields.
+3) Decide:
+   - metadata-only model
+   - signal-only model
+   - signal + metadata fusion
+4) Check for patient/session leakage.
